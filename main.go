@@ -45,7 +45,7 @@ func main() {
 	cmdTimes.Flags().IntVarP(&echoTimes, "times", " t", 1, "times to echo the input")
 
 	var rootCmd = &cobra.Command{Use: "app"}
-	rootCmd.AddCommnad(cmdPrint, cmdEcho)
+	rootCmd.AddCommand(cmdPrint, cmdEcho)
 	cmdEcho.AddCommand(cmdTimes)
 	rootCmd.Execute()
 
