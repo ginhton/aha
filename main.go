@@ -35,14 +35,14 @@ func main() {
 		Short: "Echo anything to the screen more times",
 		Long:  `echo things multiple time back to the userr  by providing a count and a string.`,
 		Args:  cobra.MinimumNArgs(1),
-		Run: func(mcd *cobra.Command, args []string) {
+		Run: func(cmd *cobra.Command, args []string) {
 			for i := 0; i < echoTimes; i++ {
 				fmt.Println("Echo: " + strings.Join(args, " "))
 			}
 		},
 	}
 
-	cmdTimes.Flags().IntVarP(&echoTimes, "times", " t", 1, "times to echo the input")
+	cmdTimes.Flags().IntVarP(&echoTimes, "times", "t", 1, "times to echo the input")
 
 	var rootCmd = &cobra.Command{Use: "app"}
 	rootCmd.AddCommand(cmdPrint, cmdEcho)
