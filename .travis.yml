@@ -1,4 +1,5 @@
 language: go
 
 script:
-  - go build
+  - go build -o balabala
+  - balabala
