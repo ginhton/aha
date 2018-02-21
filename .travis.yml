@@ -2,6 +2,6 @@ language: go
 
 script:
   - go build -o balabala
-  - ./balabala
+  - ./balabala print hello world
   - go install
-  - aha
+  - aha print hello world
