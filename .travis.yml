@@ -2,4 +2,6 @@ language: go
 
 script:
   - go build -o balabala
-  - balabala
+  - ./balabala
+  - go install
+  - aha
